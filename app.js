@@ -13,14 +13,17 @@ $(document).ready(function(){
 
     // make boba counter button
     $("#boba").click(function(){
-       
+        // add restart button once game starts
+        $("#restart").show();
         
-        // reload page on click
+        // reload page on click & restart game
         $("#restart").click(function(){
-            location.reload();
+            location.reload(true);
         })
         
+        // increment counter
         totalBoba = totalBoba + 1;
+        // show incrementing counter
         $("#counter").text(`Boba Count = ${totalBoba}`)
 
         
